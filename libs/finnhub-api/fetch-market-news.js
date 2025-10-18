@@ -3,7 +3,7 @@ const finnhub = require('finnhub');
 const secretKey = process.env.FINNHUB_API_KEY;
 
 if (!secretKey) {
-    console.error('FINNHUB_API_KEY is missing in environment variables.');
+    console.error('API key is missing in environment variables.');
     throw new Error('API Key missing'); 
 }
 
