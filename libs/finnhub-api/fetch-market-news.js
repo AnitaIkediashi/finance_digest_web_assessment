@@ -16,10 +16,9 @@ export async function fetchMarketNews() {
         finnhubClient.marketNews("general", {}, (error, data, response) => {
             if (error) {
                 console.error('Error fetching market news:', error);
-                return resolve([]); // Reject the promise on error
+                return resolve([]); //resolve to an empty object
             }
-            // Check for success status, though Finnhub's client might handle 
-            // some errors before the callback.
+            
             if (response && response.status === 200) {
                 // console.log('data length: ',data.length)
                 return resolve(data); // Resolve with the news data
