@@ -11,7 +11,7 @@ function convertDate(datetime) {
 
 export const DisplayContent = async () => {
     const news = await fetchMarketNews()
-    const slicedNews = news.slice(0, 12);
+    const slicedNews = news.slice(0, 12); //display 12 news items
   return (
     <section className="w-full">
       {slicedNews.length === 0 ? (
