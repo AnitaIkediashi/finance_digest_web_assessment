@@ -1,5 +1,6 @@
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header";
 
 const rubikSans = Rubik({
   subsets: ["latin"],
@@ -15,8 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${rubikSans.variable} antialiased`}
+        className={`${rubikSans.variable} antialiased lg:max-w-[calc(100vw-48px)] lg:mx-auto w-full min-h-screen px-4 pb-[51px]`}
       >
+        <Header />
         {children}
       </body>
     </html>
