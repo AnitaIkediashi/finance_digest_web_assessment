@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0E0D13;
+  --foreground: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-rubik: var(--font-rubik-sans);
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-rubik-sans);
+}
+
+.image-animation, 
+.text-animation {
+  animation: skeleton-loading 1.5s infinite linear alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #4a5565;
+  }
+  50% {
+    background-color: #101828; /* Slightly darker shade */
+  }
+  100% {
+    background-color: #4a5565;
+  }
+}
